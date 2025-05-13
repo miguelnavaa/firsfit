@@ -1,0 +1,18 @@
+.background {
+ background-color:rgba(218, 218, 218, 0.689);
+ text-align:center;
+}
+
+.texto {
+    text-align: center;
+    color: blue;
+}
+
+div {
+  width: 300px;
+  margin:auto;
+}
+.hola {
+  width: 300px;
+  margin:auto;
+}
