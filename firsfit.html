@@ -1,20 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head><link rel="stylesheet" href="estilos.css">
-
     <title>firsfit</title>
 </head>
-<body>
-    <div class="menu-sup d-flex">
-        <h2 class="text-right">EN | ES | IT | FR </h2>
+<body style="background-color: black;" class="front-face" >
+>
+    <div class="menu-sup">
+        <h2 class="text-right" style="color:gray">EN | ES | IT | FR </h2>
     </div>
     <br>
-    <div class="bloque-padre">
-        <div class="bloque-1-izq">firsfit
-            <h2>balavoaofa</h2>
+    <div class="bloque-padre d-flex">
+        <!-- izquierda -->
+        <div class="bloque-1-izq text-center cuadrado-login">
+            <br>
+            <img src="img/firstfit.png" width="250px"/>
+            
+            <br>
+            <br>
+
+            <form action="/formulario" method="post">
+            <input type='email'id="email" name="email"
+            placeholder="       Correo Electronico" />
+
+            <br>
+            <form action="/formulario" method="post">
+            <input type='password'id="passwd" name="passwd"
+            placeholder="             Contraseña" />
+
+            <br>
+            <br>
+
+             <a target="_blank" href="https://app.firstfit.es/registro">Registro</a>
+            
+            <br>
+            <br>
+
+            <button  class="btn" onclick="this.classList.toggle('selected')" style="color:blue; 
+            background-color:white; border:1px solid white" 
+            >iniciar sesion</button>
+
+            <br>
+            <br>
+
+            <a target="_blank" href="https://app.firstfit.es/recuperar-cuenta">¿Haz olvidado tu contraseña?</a>
+
         </div>
-        <div class="bloque-2-der">plataforma
-            <h2>fafafaefg</h2>
+
+        <!-- derecha -->
+
+        <div style="border-radius: 10px;" class="bloque-2-der text-center">
+            <br>
+            <img src="img/logo-firsfit.png" width="120px">
+            <h3 style="color: white;">Plataforma inteligente para</h3>
+            <h2 style="color: white;">una comunicación más eficiente</h2>
+            <div class="tx-movible">
+                <h4 style="color: white;">A través de esta plataforma puede compartir, revisar y aprobar</h4>
+            </div>
+            <img src="img/moviles-personas.png" width="150px">
         </div>
     </div>
 </body>
