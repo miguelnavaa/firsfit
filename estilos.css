@@ -37,25 +37,52 @@
 
 .menu-sup {
     border: 1px solid purple;
-    width: calc(100% - 15px);
+    width: calc(90% - 50px);
     margin: 0 auto;
     text-align: right;
 }
 
 .bloque-padre{
     border:1px solid green;
-    width: calc(100% - 15px);
+    width: calc(90% - 50px);
     margin: 0 auto;
 }
 
 .bloque-1-izq {
     border: 1px yellowgreen;
-    width: calc(90% - 10px);
+    width: calc(90% - 50px);
     margin: 0 auto;
 }
 
 .bloque-2-der {
     border: 1px greenyellow;
-    width: calc(90% - 10px);
+    width: calc(100% - 50px);
     margin: 0 auto;
+}
+
+.tx-movible{
+    border: 1px red;
+    width: calc(70% - 15px);
+    margin: 0 auto ;
+}
+
+.background{
+    color: black;
+}
+
+.cuadrado-login{
+    border: 1px solid red;
+    background-color: white;
+    width: 100% ;
+    margin: 10px ;
+    border-radius: 10px;
+}
+
+@font-face {
+  font-family: 'MiFuente';
+  src: url('fonts/mi-fuente.woff2') format('woff2');
+}
+
+body {
+  font-family: 'MiFuente', sans-serif;
 }
