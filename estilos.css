@@ -1,18 +1,61 @@
-.background {
- background-color:rgba(218, 218, 218, 0.689);
- text-align:center;
+.border-red { 
+  border: 1px solid red; 
 }
 
-.texto {
-    text-align: center;
-    color: blue;
+.text-center {
+  text-align: center;
 }
 
-div {
-  width: 300px;
-  margin:auto;
+.text-right {
+  text-align: right;
 }
-.hola {
-  width: 300px;
-  margin:auto;
+
+.d-flex {
+  display:flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-self: center;
+}
+
+.container {
+  max-width: 1240px;
+  margin:0 auto;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.input-app {
+  width: calc(100% - 15px);
+}
+
+.menu-sup {
+    border: 1px solid purple;
+    width: calc(100% - 15px);
+    margin: 0 auto;
+    text-align: right;
+}
+
+.bloque-padre{
+    border:1px solid green;
+    width: calc(100% - 15px);
+    margin: 0 auto;
+}
+
+.bloque-1-izq {
+    border: 1px yellowgreen;
+    width: calc(90% - 10px);
+    margin: 0 auto;
+}
+
+.bloque-2-der {
+    border: 1px greenyellow;
+    width: calc(90% - 10px);
+    margin: 0 auto;
 }
