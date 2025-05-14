@@ -37,14 +37,17 @@
 
 .menu-sup {
     border: 1px solid purple;
-    width: calc(90% - 50px);
+    width: calc(80% - 50px);
+    height: 500px;
+    padding-right: 10px;
     margin: 0 auto;
     text-align: right;
 }
 
 .bloque-padre{
     border:1px solid green;
-    width: calc(90% - 50px);
+    width: calc(81% - 50px);
+    height: 500px;
     margin: 0 auto;
 }
 
@@ -85,4 +88,12 @@
 
 body {
   font-family: 'MiFuente', sans-serif;
+}
+
+.space {
+    padding: 30px;
+}
+
+.space-in-box {
+    padding: 10px;
 }
