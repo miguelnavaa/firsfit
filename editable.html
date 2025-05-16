@@ -1,40 +1,67 @@
 <!DOCTYPE html>
-<html>
-<head><link rel="stylesheet" href="editable.css">
-    <title>Document</title>
+<html lang="es">
+<head>
+  <title>Mapa Conceptual</title>
+  <link rel="stylesheet" href="editable.css">
 </head>
-<body class="background">
-    <!--MENU SUPERIOR-->
-    <div class="bloque-menu-sup">
-        <h4 class="color-menu-sup">EN | ES | IT | FR </h4>
-    </div>
-    <!--FIN MENU SUPERIOR-->
-    <!-- BLOQUE PADRE-->
-     <div class="bloque-padre d-flex">
-         
-        <!--bloque izquierda-->
-        <div class="bloque-izquierda espacio-arriba text-left">
-            
-            <img src="img/firstfit.png" width="250px"/>
+<body style="background-color: rgb(0, 0, 0);">
+    <!-- encabezado -->
+  <header class="encabezado" style="color: gray;">EN | ES | IT | FR </header>
+  <!-- fin encabezado -->
 
-            <div  class="margen-izquierda text-center">
-            <form action="/formulario" method="post">
-            <input type="email"  id="email"  name="email"  placeholder="         Correo Electrónico">
-            
-            <div class="espacio"></div>
+    <br><br><br><br><br><br>
 
-            <input type='password'id="passwd" name="passwd"
-            placeholder="              Contraseña" />
+  <!--contenedor padre, usar main pq es el contenido principal -->
+  <main class="contenedor">
 
-            </div>
+    <!-- columna izquierda -->
+    <section class="columna-izquierda">
+      <div class="cuadro-rojo" style="background-color: white;">
+        <img src="img/firstfit.png" alt="Imagen" class="imagen">
+        <form class="formulario">
+          <label for="email"></label>
+          <input type="email" id="email" name="email" required placeholder="Correo Electrónico"
+          style="border-radius: 20px;" >
 
+          <label for="password"></label>
+          <input type="password" id="password" name="password" required placeholder="Contraseña"
+          style="border-radius: 20px;">
+
+          <div class="mostrar-contrasena">
+            <input type="checkbox" id="togglePassword" >
+            <label for="togglePassword">mostrar</label>
+          </div>
+
+          <button type="submit" class="rendondeo-boton-inicio">Iniciar sesión</button>
+        </form>
+      </div>
+    </section>
+    <!--fin columna izquierda -->
+
+    <!-- columna derecha -->
+    <section class="columna-derecha">
+      <div class="cuadro-naranja">
+        <img src="img/logo-firsfit.png" />
+        <h3 style="color: white;">Plataforma inteligente para</h3>
+        <h2 style="color: white;">una comunicación más eficiente</h2>
+        <div class="tx-movible">
+            <h4 style="color: white;">A través de esta plataforma puede compartir, revisar y aprobar casos. 
+                La comunicación es la clave para un trabajo perfecto.</h4>
         </div>
+        <img src="img/moviles-personas.png" width="150px">
 
-        <!--bloque derecha-->
-        <div class="bloque derecha espacio-arriba text-center">
-            <img src="img/logo-firsfit.png" width="100px"/>
-        </div>
-    </div>
-    
+      </div>
+    </section>
+    <!-- fin columna derecha-->
+  </main>
+
+  <script>
+    const togglePassword = document.getElementById('togglePassword');
+    const password = document.getElementById('password');
+
+    togglePassword.addEventListener('change', () => {
+      password.type = togglePassword.checked ? 'text' : 'password';
+    });
+  </script>
 </body>
 </html>
