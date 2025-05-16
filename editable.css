@@ -1,73 +1,96 @@
-/*separados*/
-.d-flex{
-    display:flex;
+/* Colores base */
+.encabezado {
+  border: 3px solid pink;
+  padding: 10px;
+  margin-bottom: 5px;
+  text-align: right;
+  font-size: 1em;
 }
 
-.text-center {
+.contenedor {
+  display: flex;
+  border: 3px solid orange;
+  padding: 10px;
+  height: 100%;
+}
+
+.columna-izquierda {
+  flex: 1;
+  border: 3px solid limegreen;
+  margin-right: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.columna-derecha {
+  flex: 1;
+  border: 3px solid gold;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
 
-.text-left {
-    text-align: left;
+.cuadro-rojo {
+  border: 3px solid red;
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  padding-top: 7%;
+  height: 80%;
+  border-radius: 20px;
 }
 
-.espacio-arriba {
-    padding-top: 10px;
+.cuadro-naranja {
+  border: 3px solid orange;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
 }
 
-.background {
-    background-color: black;
-}
-/**/
-
-/*menu superior*/
-.bloque-menu-sup {
-    border: 1px solid purple;
-    width: calc(80% - 50px);
-    height: 30%;
-    padding-right: 10px;
-    margin: 0 auto;
-    text-align: right;
+.imagen {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
 }
 
-.color-menu-sup {
-    color:rgb(69, 69, 69);
-    text-align: right 4px;
-}
-/* fin menu superior*/
-
-/*bloque padre*/
-.bloque-padre{
-    border:1px solid green;
-    width: calc(80% - 50px);
-    height: 0 auto;
-    margin: 0 auto;
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-/*bloque izquierda*/
-.bloque-izquierda {
-    border: 1px blue;
-    width: fit-content;
-    margin: 0 auto;
+input[type="email"],
+input[type="password"] {
+  padding: 8px;
+  font-size: 1em;
 }
 
-.cuadrado-login{
-    width: auto;
+button {
+  padding: 10px;
+  background-color: #ffffff;
+  color: blue;
+  border: 1px;
+  cursor: pointer;
+  font-size: 1em;
 }
 
-.margen-izquierda {
-    background-color: rgb(255, 255, 255);
-    margin: 50px 50px 50px 50px;
-    padding: 30px 25px 20px 15px;
-    border: 1px solid black;
-    height: 100px;
-    width: 165px;
-    outline: 1px solid red;
-    border-radius: 10px;
+button:hover {
+  background-color: blue;
+  color: #ffffff;
 }
-/*bloque derecha*/
-.bloque-derecha {
-    border: 1px red;
-    width:fit-content;
-    margin: 0 auto;
+
+.mostrar-contrasena {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9em;
+}
+
+.rendondeo-boton-inicio {
+  border-radius: 20px;
 }
