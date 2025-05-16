@@ -9,7 +9,7 @@
   <header class="encabezado" style="color: gray;">EN | ES | IT | FR </header>
   <!-- fin encabezado -->
 
-    <br><br><br><br><br><br>
+    <br>
 
   <!--contenedor padre, usar main pq es el contenido principal -->
   <main class="contenedor">
@@ -17,6 +17,9 @@
     <!-- columna izquierda -->
     <section class="columna-izquierda">
       <div class="cuadro-rojo" style="background-color: white;">
+        <br>
+        <br>
+        <br>
         <img src="img/firstfit.png" alt="Imagen" class="imagen">
         <form class="formulario">
           <label for="email"></label>
@@ -32,7 +35,12 @@
             <label for="togglePassword">mostrar</label>
           </div>
 
+          <a target="_blank" href="https://app.firstfit.es/registro">Registro</a>        
+
           <button type="submit" class="rendondeo-boton-inicio">Iniciar sesión</button>
+
+
+          <a target="_blank" href="https://app.firstfit.es/recuperar-cuenta">¿Haz olvidado tu contraseña?</a>
         </form>
       </div>
     </section>
@@ -41,20 +49,22 @@
     <!-- columna derecha -->
     <section class="columna-derecha">
       <div class="cuadro-naranja">
+        <br>
         <img src="img/logo-firsfit.png" />
-        <h3 style="color: white;">Plataforma inteligente para</h3>
-        <h2 style="color: white;">una comunicación más eficiente</h2>
+        <h2 style="color: white;">Plataforma inteligente para</h2>
+        <h1 style="color: white;">una comunicación más eficiente</h1>
         <div class="tx-movible">
             <h4 style="color: white;">A través de esta plataforma puede compartir, revisar y aprobar casos. 
                 La comunicación es la clave para un trabajo perfecto.</h4>
         </div>
+        <br>
         <img src="img/moviles-personas.png" width="150px">
-
       </div>
     </section>
     <!-- fin columna derecha-->
+    
   </main>
-
+  <!-- botones funcionalidades -->
   <script>
     const togglePassword = document.getElementById('togglePassword');
     const password = document.getElementById('password');
@@ -63,5 +73,6 @@
       password.type = togglePassword.checked ? 'text' : 'password';
     });
   </script>
+
 </body>
-</html>
+</html> 
