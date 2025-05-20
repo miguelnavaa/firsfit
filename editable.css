@@ -3,6 +3,17 @@
   src: url('fonts/mi-fuente.woff2') format('woff2');
 }
 
+body {
+  font-family: 'MiFuente', sans-serif;
+}
+
+.columna-izquierda,
+.columna-derecha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Colores base */
 .encabezado {
   border: 3px solid rgb(0, 0, 0);
@@ -42,6 +53,7 @@
 }
 
 .cuadro-rojo {
+  background-color: #ffffff;
   border: 3px solid rgb(0, 0, 0);
   padding: 30px;
   text-align: center;
@@ -80,14 +92,17 @@ input[type="password"] {
   font-size: 1em;
 }
 
+
 button {
   padding: 10px;
   background-color: #ffffff;
   color: blue;
-  border: 1px;
+  border: 2px solid blue;
   cursor: pointer;
   font-size: 1em;
+  border-radius: 20px;
 }
+
 
 button:hover {
   background-color: blue;
@@ -103,4 +118,15 @@ button:hover {
 
 .rendondeo-boton-inicio {
   border-radius: 20px;
+}
+
+.background {
+  background-color: rgb(0, 0, 0);
+}
+.encabezado-letras {
+  color: gray;
+}
+
+.color-letras-derecha {
+  color: white;
 }
