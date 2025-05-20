@@ -37,7 +37,7 @@
 
           <a target="_blank" href="https://app.firstfit.es/registro">Registro</a>        
 
-          <button type="submit" id="btnLogin" class="rendondeo-boton-inicio">Iniciar sesión</button>
+          <button type="button" id="btnLogin" class="rendondeo-boton-inicio">Iniciar sesión</button>
 
 
           <a target="_blank" href="https://app.firstfit.es/recuperar-cuenta">¿Haz olvidado tu contraseña?</a>
@@ -66,30 +66,24 @@
   </main>
   <!-- botones funcionalidades -->
   <script>
-    const togglePassword = document.getElementById('togglePassword');
-    const password = document.getElementById('password');
-
-    togglePassword.addEventListener('change', () => {
-      password.type = togglePassword.checked ? 'text' : 'password';
-    });
-
+  document.addEventListener("DOMContentLoaded", function () {
     const btnLogin = document.getElementById("btnLogin");
     const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
 
     btnLogin.addEventListener("click", function () {
-    const email = emailInput.value.trim();
-    const password = passwordInput.value.trim();
+      const email = emailInput.value.trim();
+      const password = passwordInput.value.trim();
 
-    if (email === "" || password === "") {
-      alert("Rellena los campos");
-    } else if (email === "test@test.com" && password === "123456") {
-      // Redirige a dashboard.html
-      window.location.href = "dashboard.html";
-    } else {
-      alert("Credenciales Incorrectas");
-     }
-     });
+      if (email === "" || password === "") {
+        alert("Rellena los campos");
+      } else if (email === "test@test.com" && password === "123456") {
+        window.location.href = "dashboard.html";
+      } else {
+        alert("Credenciales Incorrectas");
+      }
+    });
+  });
   </script>
 
 
