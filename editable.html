@@ -32,12 +32,12 @@
 
           <div class="mostrar-contrasena">
             <input type="checkbox" id="togglePassword" >
-            <label for="togglePassword">mostrar</label>
+            <label for="togglePassword">mostrar &#128274</label>
           </div>
 
           <a target="_blank" href="https://app.firstfit.es/registro">Registro</a>        
 
-          <button type="submit" class="rendondeo-boton-inicio">Iniciar sesión</button>
+          <button type="submit" id="btnLogin" class="rendondeo-boton-inicio">Iniciar sesión</button>
 
 
           <a target="_blank" href="https://app.firstfit.es/recuperar-cuenta">¿Haz olvidado tu contraseña?</a>
@@ -72,7 +72,26 @@
     togglePassword.addEventListener('change', () => {
       password.type = togglePassword.checked ? 'text' : 'password';
     });
+
+    const btnLogin = document.getElementById("btnLogin");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+
+    btnLogin.addEventListener("click", function () {
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
+
+    if (email === "" || password === "") {
+      alert("Rellena los campos");
+    } else if (email === "test@test.com" && password === "123456") {
+      // Redirige a dashboard.html
+      window.location.href = "dashboard.html";
+    } else {
+      alert("Credenciales Incorrectas");
+     }
+     });
   </script>
+
 
 </body>
 </html> 
