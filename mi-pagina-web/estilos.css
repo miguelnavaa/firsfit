@@ -129,3 +129,54 @@ body {
 body {
   font-family: 'MiFuente', sans-serif;
 }
+
+/* pagina 2 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.blue-box {
+  border: 3px solid #00aaff;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Contenedor verde */
+.green-container {
+  border: 3px solid green;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Cuadros amarillos */
+.yellow-box {
+  border: 3px solid gold;
+  flex: 1 1 30%;
+  min-width: 250px;
+  min-height: 200px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* RESPONSIVE: en pantallas pequeñas, que se vean solo 2 por fila */
+@media (max-width: 800px) {
+  .yellow-box {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 500px) {
+  .yellow-box {
+    flex: 1 1 100%;
+  }
+}
