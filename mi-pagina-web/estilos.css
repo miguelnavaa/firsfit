@@ -180,3 +180,49 @@ body {
     flex: 1 1 100%;
   }
 }
+
+/* calcu */
+
+
+.calculadora {
+  background: rgb(153, 153, 153);
+  border-radius: 10px;
+  box-shadow: black;
+  width: 260px;
+  padding: 10px;
+}
+
+.pantalla {
+  background: white;
+  height: 60px;
+  font-size: 24px;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.fila {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+button {
+  flex: 1;
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: white;
+}
+
+.igual {
+  width: 100%;
+  background: gray;
+}
