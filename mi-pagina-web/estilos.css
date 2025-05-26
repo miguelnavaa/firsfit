@@ -214,7 +214,7 @@ button {
   font-size: 18px;
   border: none;
   border-radius: 5px;
-  background: white;
+  background: rgb(185, 185, 185);
   cursor: pointer;
 }
 
@@ -225,4 +225,57 @@ button:hover {
 .igual {
   width: 100%;
   background: gray;
+}
+
+.en-construccion {
+  text-align: center;
+  background: #fff3cd;
+  color: #856404;
+  padding: 10px;
+  border: 1px solid #ffeeba;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.flotante {
+  animation: flotar 2s ease-in-out infinite;
+  color: #555;
+  text-align: center;
+  margin-top: 30px;
+}
+
+@keyframes flotar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.progreso {
+  width: 100%;
+  background-color: #eee;
+  border-radius: 5px;
+  margin: 20px 0;
+  height: 20px;
+}
+
+.barra {
+  width: 40%; /* puedes animarlo luego */
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: girar 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes girar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
