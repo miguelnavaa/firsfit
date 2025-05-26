@@ -1,112 +1,31 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <title>pagina web</title>
-  <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
+const pantalla = document.getElementById("pantalla");
+let operacion = "";
 
-  <div class="container">
-    <!-- Cuadro rojo con texto -->
-    <div class="input-box">podria interesarte...  
-        <div class="hiper-links">
-            <!-- Botón que abre otra pestaña -->
-            <button  class="proximamente" onclick="window.open('pagina2.html', '_blank')">contacto</button>
-            |
-            <button class="stock" onclick="window.open('pagina3.html', '_blank')">ayudanos</button>
-        </div>
-    </div>
+// Agregar eventos a todos los botones
+document.querySelectorAll("button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const valor = btn.innerText;
 
-    <!-- Cuadros naranja y amarillo con imagen -->
-    <div class="image-row">
-      <div class="image-box orange">vinted
-        <img src=>
-      </div>
-      <div class="image-box yellow">walapo
-        <img src= >
-      </div>
-    </div>  
+    if (valor === "CE") {
+      operacion = "";
+      pantalla.innerText = "0";
+      return;
+    }
 
-    <br>
+    if (valor === "=") {
+      try {
+        // Reemplazar símbolos por operadores reales
+        const resultado = eval(operacion.replace(/÷/g, "/").replace(/×/g, "*").replace(/−/g, "-"));
+        pantalla.innerText = resultado;
+        operacion = resultado.toString();
+      } catch {
+        pantalla.innerText = "Error";
+        operacion = "";
+      }
+      return;
+    }
 
-    <!-- Cuadro marrón con cuatro cuadros dentro -->
-    <div class="bottom-box">
-      <div class="photo-text-group">
-        <div class="photo-box">
-          <img src= img/stock-de-ropa.png onclick="window.open('stock-ropa.html', '_blank')">
-        </div>
-    </div>
-
-        <div class="photo-text-group">
-          <div class="photo-box">
-            <img src= img/stock-de-electr.png onclick="window.open('stock-electr.html', '_blank')">
-          </div>
-     </div>
-
-  </div>
-
-  <!-- calcu -->
-
-  <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora</title>
-  <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-  <div class="calculadora">
-    <div id="pantalla" class="pantalla">0</div>
-
-    <div class="fila">
-      <button id="boton-7">7</button>
-      <button id="boton-8">8</button>
-      <button id="boton-9">9</button>
-      <button id="boton-dividir color-botones" style="background-color: rgb(87, 87, 87);">÷</button>
-    </div>
-    <div class="fila">
-      <button id="boton-4">4</button>
-      <button id="boton-5">5</button>
-      <button id="boton-6">6</button>
-      <button id="boton-multiplicar color-botones" style="background-color: rgb(87, 87, 87);">X</button>
-    </div>
-    <div class="fila">
-      <button id="boton-1">1</button>
-      <button id="boton-2">2</button>
-      <button id="boton-3">3</button>
-      <button id="boton-restar color-botones" style="background-color: rgb(87, 87, 87);" >-</button>
-    </div>
-    <div class="fila">
-      <button id="boton-0">0</button>
-      <button id="boton-ce">BR</button>
-      <button id="boton-sumar" style="background-color: rgb(87, 87, 87);">+</button>
-      <button id="boton-igual color-botones" class="igual" style="background-color: rgb(87, 87, 87);">=</button>
-    </div>
-  </div>
-
-  <div class="loader"></div>
-
-  <div class="progreso">
-  <div class="barra"></div>
-  </div>
-
-
-  <div class="en-construccion">🔧 Esta seccion esta en construccion</div>
-  <h3 class="flotante">proximamente mas cosas</h3>
-
-
-
-</body>
-</html>
-
-
-
-</body>
-</html>
-
-<!-- 
-
-
-
--->
+    operacion += valor;
+    pantalla.innerText = operacion;
+  });
+});
